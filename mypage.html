@@ -1,0 +1,651 @@
+<?php
+    $A=$_POST["wt_per_1"];
+$B=$_POST["wt_per_2"];
+$C=$_POST["wt_per_3"];
+$D=$_POST["wt_per_4"];
+$E=$_POST["wt_per_5"];
+$F=$_POST["wt_per_6"];
+$G=$_POST["wt_per_7"];
+$H=$_POST["wt_per_8"];
+$I=$_POST["wt_per_9"];
+$J=$_POST["wt_per_10"];
+$K=$_POST["wt_per_11"];
+$L=$_POST["wt_per_12"];
+$M=$A+$B+$C+$D+$E+$F+$G+$H+$I+$J+$K+$L;
+
+$A1=$_POST["fb_per_1"];
+$B1=$_POST["fb_per_2"];
+$C1=$_POST["fb_per_3"];
+$D1=$_POST["fb_per_4"];
+$E1=$_POST["fb_per_5"];
+$F1=$_POST["fb_per_6"];
+$G1=$_POST["fb_per_7"];
+$H1=$_POST["fb_per_8"];
+$I1=$_POST["fb_per_9"];
+$J1=$_POST["fb_per_10"];
+$K1=$_POST["fb_per_11"];
+$L1=$_POST["fb_per_12"];
+$M1=$A1+$B1+$C1+$D1+$E1+$F1+$G1+$H1+$I1+$J1+$K1+$L1;
+
+$A2=$_POST["in_per_1"];
+$B2=$_POST["in_per_2"];
+$C2=$_POST["in_per_3"];
+$D2=$_POST["in_per_4"];
+$E2=$_POST["in_per_5"];
+$F2=$_POST["in_per_6"];
+$G2=$_POST["in_per_7"];
+$H2=$_POST["in_per_8"];
+$I2=$_POST["in_per_9"];
+$J2=$_POST["in_per_10"];
+$K2=$_POST["in_per_11"];
+$L2=$_POST["in_per_12"];
+$M2=$A2+$B2+$C2+$D2+$E2+$F2+$G2+$H2+$I2+$J2+$K2+$L2;
+
+$A3=$_POST["yt_per_1"];
+$B3=$_POST["yt_per_2"];
+$C3=$_POST["yt_per_3"];
+$D3=$_POST["yt_per_4"];
+$E3=$_POST["yt_per_5"];
+$F3=$_POST["yt_per_6"];
+$G3=$_POST["yt_per_7"];
+$H3=$_POST["yt_per_8"];
+$I3=$_POST["yt_per_9"];
+$J3=$_POST["yt_per_10"];
+$K3=$_POST["yt_per_11"];
+$L3=$_POST["yt_per_12"];
+$M3=A3+$B3+$C3+$D3+$E3+$F3+$G3+$H3+$I3+$J3+$K3+$L3;
+$m=$M1+$M2+$M3+$M;
+$a=$_POST["wt_leads"];
+$b=$_POST["fb_leads"];
+$c=$_POST["in_leads"];
+$d=$_POST["yt_leads"];
+$e=$a+$b+$c+$d;
+$P=$M/$m*100;
+$p=intval($P);
+$P1=$M1/$m*100;
+$p1=intval($P1);
+$P2=$M2/$m*100;
+$p2=intval($P2);
+$P3=$M3/$m*100;
+$p3=intval($P3);
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yearly Analytics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+  body {
+      position: relative; 
+  }
+  </style>
+
+</head>
+<body style="background:#fff;margin-bottom: 50px;">
+     <div class="container" style="background: #fff;border: 2px solid #e8e0e0;margin-top: 50px;">
+          <div class="row" style="background: #B53471;padding: 20px;">
+               
+               <div class="col-md-12 text-center" >
+               	<img src="download.png" width="300px" height="75px">
+                   <h1 style="color:#f5f6fa">Whatsapp Status Marketing Analytics</h1>
+               </div>
+           </div><br>
+                
+               <div class="col-md-12">
+                  <div class="row text-center">
+
+                    <div class="col-md-6 card" style="background: #fdcb6e;">
+                    	<h4 style="color:#273c75;font-size: x-large;text-align: center;"><b>
+                           <?php echo $_POST["ad_title"]; ?> 
+                        </b></h4>
+                        <div><h4 style="color:#273c75;"><b><?php echo $_POST["ad_loc"];?></b></h4>
+                        <h4 style="color:#273c75;"><b>Yearly Plan: Rs.10000/-</b></h4></div>
+                    </div>
+                    <div class="col-md-6 card" style="background: #ffeaa7;">
+                        <h4 style="color:#273c75;font-size: x-large;text-align: center;"><b>Total Views : <?php
+                                        echo $m;
+                                    ?></b><b style="color:green"></b></h4>
+                        <h4 class="font-weight-normal">Summary of how many members</h4>
+                        <h4 class="font-weight-normal">reached on <b style="color:#273c75;">
+                        <?php echo $_POST["ad_date"];?> to <?php echo $_POST["ad_date"];?>.</b></h4>
+                    </div>
+                  </div>
+                 
+    </div>
+              
+                
+        <div  class="container-fluid">  
+                <div class="row">  
+                     <div  class="container-fluid">
+                <div class="row"> 
+                    <div class="col-md-6" style="padding-inline:40px"><br><br>
+                    <div class="card" style="border-color: #f5f6fa;border: 5px solid #f5f6fa;box-shadow: 10px 10px 10px #eee;height:630px";>
+                        <h3 style="color:#30336b"><b><center> Yearly Marketing Analytics</center></b></h3>
+                    <div class="row" style="padding:10px;">
+
+                    <div class="col-md-4"><b style="color:#273c75">
+                    <img src="wp.png" height="25px" width="25px">&nbsp;WhatsApp</b></div>
+                    <div class="col-md-8">
+                       <div class="progress" style="height:20px">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style=" width:<?php 
+                            echo $M/$m*100;
+
+                            ?>%;
+                            background: linear-gradient(45deg, #027d07, #8cef1a);">
+                        <?php 
+                            echo $p;
+
+                            ?>%</div>
+                       </div></div>
+                    </div>
+
+                    <div class="row" style="padding:10px;"> 
+                    <div class="col-md-4"><b style="color:#273c75">
+                        <img src="fb.png" height="25px" width="25px">&nbsp;Facebook</b></div>
+                    <div class="col-md-8">
+                       <div class="progress" style="height:20px">
+                            <div class="progress-bar progress-bar-striped" style="width:<?php 
+                            echo $M1/$m*100;
+
+                            ?>%;background: linear-gradient(
+45deg
+, #3f51b5, #cfbdef);"><?php 
+                            echo $p1;
+
+                            ?>%</div>
+                       </div>
+                    </div>  
+                    </div>
+
+
+                    <div class="row" style="padding:10px;"> 
+                    <div class="col-md-4"><b style="color:#273c75">
+                        <img src="in.png" height="25px" width="25px">&nbsp;Instagram</b></div>
+                    <div class="col-md-8">
+                       <div class="progress" style="height:20px">
+                            <div class="progress-bar progress-bar-striped" style="width:<?php 
+                            echo $M2/$m*100;
+
+                            ?>%;background: linear-gradient(
+45deg
+, #e91e63, #bd95a3);"><?php 
+                            echo $p2;
+
+                            ?>%</div>
+                       </div>
+                    </div>  </div>
+
+
+                    <div class="row" style="padding:10px;">
+                    <div class="col-md-4"><b style="color:#273c75">
+                    <img src="yt.png" height="25px" width="25px">&nbsp;
+                    Youtube</b></div>
+                    <div class="col-md-8">
+                       <div class="progress" style="height:20px">
+                            <div class="progress-bar progress-bar-striped" style="width:<?php 
+                            echo $M3/$m*100;
+
+                            ?>%;background: linear-gradient(
+45deg
+, #f44336, #bfaea8);"><?php 
+                            echo $p3;
+
+                            ?>%</div>
+                       </div>
+                    </div></div>
+                  <center>   <table class="table table-bordered text-center"  style="border: 2px solid #e8e0e0;width:400px;">
+                                   <thead>
+                                <tr class="text-center" style="background: #B53471;color:#ffffff;height:40px;">
+                                     <th><center>Category</center></th>
+                                     <th><center>Views</center></th>
+                                     <th><center>Leads(Approx)</center></th>
+                                 </tr>
+                            </thead>
+                            <tbody style="font-weight: bold;color:#2d3436;">
+                                 <tr style="height: 40px">
+                                     <td>WhatsApp</td>
+                                     <td>
+                                         <?php
+                                            echo $M;?>
+
+                                     </td>
+                                     <td><?php echo $_POST["wt_leads"];?></td>
+                                 </tr>
+                                 <tr style="height: 40px">
+                                     <td>Facebook</td>
+                                     <td>
+                                         <?php
+                                            echo $M1;
+                                        ?>
+
+                                     </td>
+                                     <td><?php echo $_POST["fb_leads"];?></td>
+                                 </tr>
+                                 <tr  style="height:40px">
+                                     <td>Instagram</td>
+                                     <td>
+                                    <?php
+                                        echo $M2;
+                                    ?>
+
+                                     </td>
+                                     <td><?php echo $_POST["in_leads"];?></td>
+                                 </tr>
+                                  
+                                  <tr  style="height:40px">
+                                     <td>Youtube</td>
+                                     <td>
+                                    <?php
+                                        echo $M3;
+                                    ?>
+
+                                     </td>
+                                     <td><?php echo $_POST["yt_leads"];?></td>
+                                 </tr> 
+                                 <tr  style="height:40px;background: #1289A7;color:#fff;">
+                                     <td>Total</td>
+                                     <td>
+                                        <?php
+                                        echo $m;
+                                    ?>
+                                          
+
+                                     </td>
+                                     <td>
+                                         <?php
+                                        echo $e;
+                                    ?>
+                                     </td>
+                                 </tr> 
+                                  
+                                      
+                                   </tbody></table></center></div>
+                </div>
+
+
+<div class="col-md-6"><br><br>
+   <div class="card" style="border-color: #f5f6fa;border: 5px solid #f5f6fa;box-shadow: 10px 10px 10px #eee;height:635px">
+                <h3 style="color:#30336b"><b><center>Proposed Plan for your Business <br/>2021 - 2022 <br/><hr/><font style="color:#EA2027;">DDS Expo Ultra Plan: Rs.25000/-</font></center></b></h3>
+                <hr/>
+               <center> <table class="table table-bordered text-center" style="color:#000s;height: 300px;width: 400px;">
+            <thead style="background: #1B1464;color:#fff;">
+              <tr >
+                  <th><center> Estimated</center></th>
+                  <th><center>Min</center></th>
+                  <th><center>Max</center></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><b>Views</b></td>
+                  <td>100000</td>
+                  <td>300000</td>
+              </tr>
+              <tr>
+                  <td><b>Leads</b></td>
+                  <td>10</td>
+                  <td>100</td>
+              </tr>
+              <tr>
+                  <td><b>Promoters</b></td>
+                  <td>500</td>
+                  <td>4000</td>
+              </tr>
+              <tr>
+                  <td><b>Duration</b>
+                  </td>
+                  <td colspan="2">365 Days</td>
+              </tr>
+              <tr>
+                  <td><b>Platforms</b>
+                  </td>
+                  <td colspan="2">
+                    <img src="wp.png" height="25px" width="25px">
+                      <img src="fb.png" height="25px" width="25px">
+                        <img src="in.png" height="25px" width="25px">
+                        <img src="yt.png" height="25px" width="25px">
+                      </td>
+              </tr>
+               <tr>
+                  <td><b>Design</b></td>
+                  <td colspan="2">
+                      52 Posters
+                      (jpg/gif/mp4)
+                  </td>
+              </tr>
+              <tr>
+                  
+              </tr>
+          </tbody>
+      </table>
+             </center>
+            </div>
+          </div>
+            </div>
+          </div>
+        <center>   <table class="table table-bordered text-center"  style="border: 2px solid #e8e0e0;width:1100px;"><br><br>
+                                   <thead>
+                                <tr class="text-center" style="background: #B53471;color:#ffffff;height:40px;font-size: 13px;">
+                                    <th style="padding: 20px"><center>Category</center></th>
+                                     <th><center>23-Aug-20<br>to<br/>23-Sep-20</center></th>
+                                     <th><center>23-Sep-20<br>to<br/>23-Oct-20</center></th>
+                                     <th><center>23-Oct-20<br>to<br/>23-Nov-20</center></th>
+                                     <th><center>23-Nov-20<br>to<br/>23-Dec-20</center></th>
+                                     <th><center>23-Dec-20<br>to<br/>23-Jan-21</center></th>
+                                     <th><center>23-Jan-21<br>to<br/>23-Feb-21</center></th>
+                                     <th><center>23-Feb-21<br>to<br/>23-Mar-21</center></th>
+                                     <th><center>23-Mar-21<br>to<br/>23-Apr-21</center></th>
+                                     <th><center>23-Apr-21<br>to<br/>23-May-21</center></th>
+                                     <th><center>23-May-21<br>to<br/>23-June-21</center></th>
+                                     <th><center>23-June-21<br>to<br/>23-July-21</center></th>
+                                     <th><center>23-July-21<br>to<br/>23-Aug-21</center></th>
+                                     
+                                 </tr>
+                            </thead>
+                            <tbody style="font-weight: bold;color:#2d3436;">
+                            	<tr style="height: 40px">
+                                     <td>Whatsapp</td>
+                                     <td><?php echo $_POST["wt_per_1"];?></td>
+                                     <td><?php echo $_POST["wt_per_2"];?></td>
+                                     <td><?php echo $_POST["wt_per_3"];?></td>
+                                     <td><?php echo $_POST["wt_per_4"];?></td>
+                                     <td><?php echo $_POST["wt_per_5"];?></td>
+                                     <td><?php echo $_POST["wt_per_6"];?></td>
+                                     <td><?php echo $_POST["wt_per_7"];?></td>
+                                     <td><?php echo $_POST["wt_per_8"];?></td>
+                                     <td><?php echo $_POST["wt_per_9"];?></td>
+                                     <td><?php echo $_POST["wt_per_10"];?></td>
+                                     <td><?php echo $_POST["wt_per_11"];?></td>
+                                     <td><?php echo $_POST["wt_per_12"];?></td>
+                                 </tr>
+                                 <tr style="height: 40px">
+                                     <td>Facebook</td>
+                                     <td><?php echo $_POST["fb_per_1"];?></td>
+                                     <td><?php echo $_POST["fb_per_2"];?></td>
+                                     <td><?php echo $_POST["fb_per_3"];?></td>
+                                     <td><?php echo $_POST["fb_per_4"];?></td>
+                                     <td><?php echo $_POST["fb_per_5"];?></td>
+                                     <td><?php echo $_POST["fb_per_6"];?></td>
+                                     <td><?php echo $_POST["fb_per_7"];?></td>
+                                     <td><?php echo $_POST["fb_per_8"];?></td>
+                                     <td><?php echo $_POST["fb_per_9"];?></td>
+                                     <td><?php echo $_POST["fb_per_10"];?></td>
+                                     <td><?php echo $_POST["fb_per_11"];?></td>
+                                     <td><?php echo $_POST["fb_per_12"];?></td>
+                                 </tr>
+                                 <tr style="height: 40px">
+                                     <td>Instagram</td>
+                                     <td><?php echo $_POST["in_per_1"];?></td>
+                                     <td><?php echo $_POST["in_per_2"];?></td>
+                                     <td><?php echo $_POST["in_per_3"];?></td>
+                                     <td><?php echo $_POST["in_per_4"];?></td>
+                                     <td><?php echo $_POST["in_per_5"];?></td>
+                                     <td><?php echo $_POST["in_per_6"];?></td>
+                                     <td><?php echo $_POST["in_per_7"];?></td>
+                                     <td><?php echo $_POST["in_per_8"];?></td>
+                                     <td><?php echo $_POST["in_per_9"];?></td>
+                                     <td><?php echo $_POST["in_per_10"];?></td>
+                                     <td><?php echo $_POST["in_per_11"];?></td>
+                                     <td><?php echo $_POST["in_per_12"];?></td>
+                                 </tr>
+
+
+                                 
+                            	<tr style="height: 40px">
+                            		<td>Youtube</td>
+                            		<td><?php echo $_POST["yt_per_1"];?></td>
+                            		<td><?php echo $_POST["yt_per_2"];?></td>
+                            		<td><?php echo $_POST["yt_per_3"];?></td>
+                            		<td><?php echo $_POST["yt_per_4"];?></td>
+                            		<td><?php echo $_POST["yt_per_5"];?></td>
+                            		<td><?php echo $_POST["yt_per_6"];?></td>
+                            		<td><?php echo $_POST["yt_per_7"];?></td>
+                            		<td><?php echo $_POST["yt_per_8"];?></td>
+                            		<td><?php echo $_POST["yt_per_9"];?></td>
+                            		<td><?php echo $_POST["yt_per_10"];?></td>
+                            		<td><?php echo $_POST["yt_per_11"];?></td>
+                            		<td><?php echo $_POST["yt_per_12"];?></td>
+                            	</tr>
+                            	<tr style="height: 40px;background: #1289A7;color:#fff;">
+                                     <td>Total Views</td>
+                                     <td>
+<?php
+$A=$_POST["wt_per_1"];
+$B=$_POST["fb_per_1"];
+$C=$_POST["in_per_1"];
+$D=$_POST["yt_per_1"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_2"];
+$B=$_POST["fb_per_2"];
+$C=$_POST["in_per_2"];
+$D=$_POST["yt_per_2"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_3"];
+$B=$_POST["fb_per_3"];
+$C=$_POST["in_per_3"];
+$D=$_POST["yt_per_3"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_4"];
+$B=$_POST["fb_per_4"];
+$C=$_POST["in_per_4"];
+$D=$_POST["yt_per_4"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_5"];
+$B=$_POST["fb_per_5"];
+$C=$_POST["in_per_5"];
+$D=$_POST["yt_per_5"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_6"];
+$B=$_POST["fb_per_6"];
+$C=$_POST["in_per_6"];
+$D=$_POST["yt_per_6"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_7"];
+$B=$_POST["fb_per_7"];
+$C=$_POST["in_per_7"];
+$D=$_POST["yt_per_7"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_8"];
+$B=$_POST["fb_per_8"];
+$C=$_POST["in_per_8"];
+$D=$_POST["yt_per_8"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_9"];
+$B=$_POST["fb_per_9"];
+$C=$_POST["in_per_9"];
+$D=$_POST["yt_per_9"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_10"];
+$B=$_POST["fb_per_10"];
+$C=$_POST["in_per_10"];
+$D=$_POST["yt_per_10"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                    <?php
+$A=$_POST["wt_per_11"];
+$B=$_POST["fb_per_11"];
+$C=$_POST["in_per_11"];
+$D=$_POST["yt_per_11"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                     <td>
+                                         <?php
+$A=$_POST["wt_per_12"];
+$B=$_POST["fb_per_12"];
+$C=$_POST["in_per_12"];
+$D=$_POST["yt_per_12"];
+echo $A + $B + $C + $D;
+?>
+                                     </td>
+                                 </tr>
+
+                                 <tr style="height: 40px;background: #009432;color:#fff;">
+                                     <td>Leads(Approx)</td>
+                                     <td><?php echo $_POST["leads1"];?></td>
+                                     <td><?php echo $_POST["leads2"];?></td>
+                                     <td><?php echo $_POST["leads3"];?></td>
+                                     <td><?php echo $_POST["leads4"];?></td>
+                                     <td><?php echo $_POST["leads5"];?></td>
+                                     <td><?php echo $_POST["leads6"];?></td>
+                                     <td><?php echo $_POST["leads7"];?></td>
+                                     <td><?php echo $_POST["leads8"];?></td>
+                                     <td><?php echo $_POST["leads9"];?></td>
+                                     <td><?php echo $_POST["leads10"];?></td>
+                                     <td><?php echo $_POST["leads11"];?></td>
+                                     <td><?php echo $_POST["leads1"];?></td>
+                                 </tr>
+                                
+                                      
+                                   </tbody></table></center>
+                </div>
+                     
+                   
+                                   <br> <br>
+
+
+                             <div class="row text-center" style="background: #B53471;color:#ffffff;padding: 15px;">
+                              <h3>Looking For Branding ?</h3>
+                              Your Brand is What other People Say About You When You're not in The Room.....! Here DDS Expo Works To Maximize Your<br>Brand Value in The Market. Choose our DDS Expo Marketing Plans and grow your Sales.<br/><br/></div>
+                 <br>
+             
+             <br>
+
+                 <div class="container">
+            <div class="row" style="margin: 0px 0px 0px -60px;padding-inline: 30px" >
+                <div class="col-md-3">
+                    <div class="card" style="border-color: #f5f6fa;border: 5px solid #f5f6fa;box-shadow: 10px 10px 10px #eee";>
+                       <center><h4 style="background: #1B1464;color:#ffffff;padding: 15px;margin-top: auto;"><b>Starter Plan: Rs.500/-</b></h4></center> 
+                         <div  style="margin: 10px 30px"> 
+                         	<h5><b>5000-10000</b>&nbsp;Views</h5>
+                            <h5><b>1-5</b>&nbsp;Leads</h5>
+                            <h5><b>50 - 100</b>&nbsp;Promoters</h5>
+                            <h5><b>1 Poster</b>&nbsp;Design</h5>
+                            <h5><img src="wp.png" height="20px" width="20px"></h5>
+                         </div>
+                    </div>
+                </div>
+          
+                 <div class="col-md-3">
+                    <div class="card" style="border-color: #f5f6fa;border: 5px solid #f5f6fa;box-shadow: 10px 10px 10px #eee";>
+                        <center><h4 style="background: #ff6b6b;color:#ffffff;padding: 15px;margin-top: auto;"><b>Basic Plan: Rs.2500/-</b></h4></center>
+                        <div  style="margin: 10px 30px">
+                        	<h5><b>30000-50000</b>&nbsp;Views</h5>
+                            <h5><b>5-10</b>&nbsp;Leads</h5>
+                            <h5><b>50-85</b>&nbsp;Promoters</h5>
+                            <h5><b>2 Poster</b>&nbsp;Designs</h5>
+                            <h5><img src="wp.png" height="20px" width="20px">&nbsp;<img src="fb.png" height="20px" width="20px"></h6>
+                        </div>
+                    </div>
+                </div>
+                    
+                 <div class="col-md-3">
+                     <div class="card" style="border-color: #f5f6fa;border: 5px solid #f5f6fa;box-shadow: 10px 10px 10px #eee";>
+                        <center><h4 style="background: #00b894;color:#ffffff;padding: 15px;margin-top: auto;"><b>Premium Plan: Rs.6500/-</b></h4></center>
+                        <div  style="margin: 10px 30px">
+                        	<h5><b>50000-80000</b>&nbsp;Views</h5>
+                            <h5><b>10-20</b>&nbsp;Leads</h5>
+                            <h5><b>80-100</b>&nbsp;Promoters</h5>
+                            <h5><b>4 Poster</b>&nbsp;Designs</h5>
+                        <h5><img src="wp.png" height="20px" width="20px">&nbsp;<img src="fb.png" height="20px" width="20px">&nbsp;<img src="in.png" height="20px" width="20px">&nbsp;</h5>
+                    </div>
+                     </div>
+                  </div>
+                <div class="col-md-3">
+                    <div class="card" style="border-color: #f5f6fa;border: 5px solid #f5f6fa;box-shadow: 10px 10px 10px #eee";>
+                        <center><h4 style="background: #B53471;color:#ffffff;padding: 15px;margin-top: auto;"><b>Ultra Plan: Rs.25000/-</b></h4></center>
+                        <div  style="margin: 10px 30px">
+                        	<h5><b>100000-300000</b>&nbsp;Views</h5>
+                            <h5><b>10-100</b>&nbsp;Leads</h5>
+                            <h5><b>500-4000</b>&nbsp;Promoters</h5>
+                            <h5><b>52 Poster</b>&nbsp;Designs</h5>
+                        <h5><img src="wp.png" height="20px" width="20px">&nbsp;<img src="fb.png" height="20px" width="20px">&nbsp;<img src="in.png" height="20px" width="20px">&nbsp;<img src="yt.png" height="20px" width="20px">
+                        </h5></div>
+                    </div>
+</div>
+ </div></div>
+  
+                             
+                       </div>
+                  <br/><br>
+               <div class="footer">
+                         <div class="row"style="color:#f5f6fa ;background:#B53471;padding: 25px;">
+                              <div class="col-md-3 text-center">
+                                  <h4><span class="glyphicon glyphicon-map-marker"></span>&nbsp;Location</h4>
+                                  Visakhapatnam
+                              </div>
+                              <div class="col-md-3 text-center">
+                                  <h4><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contact</h4>
+                                  +91 95 4245 2525<br>
+                                  +91 96 1823 1993 
+                              </div>
+                              <div class="col-md-3 text-center">
+                                   <h4><span class="glyphicon glyphicon-envelope"></span>&nbsp;Email</h4>
+                                   support@ddsexpo.com
+                              </div>
+                              <div class="col-md-3 text-center">
+                                   <h4><span class="glyphicon glyphicon-paperclip"></span>&nbsp;Website</h4>
+                                   https://www.ddsexpo.com
+                              </div>
+               </div>
+                   
+
+        
+     </div>
+  </div>
+</h6>
+
+
+	
+
+
+
+
+</body>
+</html>
