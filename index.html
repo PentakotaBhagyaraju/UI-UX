@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Application Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+
+  h1,h2{
+    text-align: center;
+  }
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+    legend.scheduler-border {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        width:auto;
+        padding:0 10px;
+        border-bottom:none;
+    }
+</style>
+
+</head>
+<body style="background-color:#eee">
+
+<div class="container" style="background-color: #fff">
+  <h1>Profile Updation Form</h1>
+
+
+  <form action="analytics.php" method="POST">
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border">User Details</legend>
+      <div class="row">
+        <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_1">First Name</label>
+      <input type="text" class="form-control" id="wp_per_1"  name="wt_per_1" required>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_2">Last Name</label>
+      <input type="text" class="form-control" id="wp_per_2"  name="wt_per_2" required>
+    </div></div></div>
+     <div class="row">
+        <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_3">Current Adress</label>
+      <textarea type="text" class="form-control" id="wp_per_3"  name="wt_per_3" required></textarea>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_4">Permanent Adress</label>
+      <textarea type="text" class="form-control" id="wp_per_4"  name="wt_per_4" required></textarea>
+    </div></div></div>
+     <div class="row">
+        <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_5">Current City</label>
+      <input type="text" class="form-control" id="wp_per_5"  name="wt_per_5" required>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_6">Contact No</label>
+      <input type="number" class="form-control" id="wp_per_6"  name="wt_per_6" required>
+    </div></div></div>
+     <div class="row">
+        <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_7">Current Pincode</label>
+      <input type="number" class="form-control" id="wp_per_7"  name="wt_per_7" required>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_8">Emergency  No</label>
+      <input type="number" class="form-control" id="wp_per_8"  name="wt_per_8" required>
+    </div></div></div>
+     <div class="row">
+        <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_9">D.O.B</label>
+      <input type="date" class="form-control" id="wp_per_9"  name="wt_per_9" required>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_10">Joining Date</label>
+      <input type="date" class="form-control" id="wp_per_10"  name="wt_per_10" required>
+    </div></div></div>
+     <div class="row">
+        <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_11">Personal Email</label>
+      <input type="email" class="form-control" id="wp_per_11"  name="wt_per_11" required>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_12">Gender</label>
+      <input type="number" class="form-control" id="wp_per_12"  name="wt_per_12" required>
+    </div></div></div>
+    <div class="row">
+         <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_11">Blood Group</label>
+      <input type="email" class="form-control" id="wp_per_11"  name="wt_per_11" required>
+    </div></div>
+     <div class="col-md-6">
+    <div class="form-group">
+      <label for="wt_per_12">Pancard</label>
+      <input type="number" class="form-control" id="wp_per_12"  name="wt_per_12" required>
+    </div></div></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>  
+  </form>
+</div>
+
+</body>
+</html>
