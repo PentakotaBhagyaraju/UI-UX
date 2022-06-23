@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style>
+    .form-control{
+  display: inline-block;
+  width:280px;
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 5px;
+border: 1px solid #bdc7d8;
+color: white;
+margin-top: 2.5px;
+}
+.btn{
+    
+    border: 1px solid #8e44ad;
+    color: #8e44ad;
+    border-radius: 17px;
+  }
+  </style>
+
+  <script type="text/javascript">
+
+function catLoad(){
+var lang=document.getElementById('language');
+var lan=lang.options[lang.selectedIndex].value;
+
+var sel=document.getElementById('category');
+var cat=sel.options[sel.selectedIndex].value;
+
+let apiKey = '5f90bd97b3ae44beadbe08fa07d3a743';
+
+xhr.open('GET', `https://newsapi.org/v2/top-headlines?category=${cat}&apiKey=${apiKey}&language=${lan}`, true);
+
+// What to do when response is ready
+xhr.onload = function () {
+
+
+    if (this.status === 200) {
+        let json = JSON.parse(this.responseText);
+        let articles = json.articles;
+        console.log(articles);
+        let newsHtml = "";
+        articles.forEach(function(element, index) {
+            // console.log(element, index)
+            let news = `<div class="card">
+                            <div class="card-header" id="heading${index}">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${index}"
+                                    aria-expanded="false" aria-controls="collapse${index}">
+                                   <b>Breaking News ${index+1}:</b> ${element["title"]}
+                                </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordion">
+                                <div class="card-body"> ${element["content"]}. <a href="${element['url']}" target="_blank" >Read more here</a>  </div>
+                            </div>
+                        </div>`;
+            newsHtml += news;
+        });
+        newsAccordion.innerHTML = newsHtml;
+    }
+    else {
+        console.log("Some error occured")
+    }
+}
+
+
+
+xhr.send();
+
+}
+</script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Welcome To Indian Shatabdi News</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-size: xxx-large;
+font-family: initial;">News</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+      <form class="form-inline my-2 my-lg-0">
+        <div class = "form-group">
+        
+          <select class = "form-control" id="language" onChange="catLoad()">
+            <option value="" disabled selected hidden>Language</option>
+             <option value="business">en</option>
+             <option value="entertainment">zh</option>
+             <option value="general">nl</option>
+             <option value="health">fr</option>
+             <option value="science">de</option>
+             <option value="sports">hi</option>
+             <option value="technology">it</option>
+          </select>
+
+
+          <select class = "form-control" id="category" onChange="catLoad()">
+            <option value="" disabled selected hidden>Select a Category</option>
+             <option value="business">Business</option>
+             <option value="entertainment">Entertainment</option>
+             <option value="general">General</option>
+             <option value="health">Health</option>
+             <option value="science">Science</option>
+             <option value="sports">Sports</option>
+             <option value="technology">Technology</option>
+          </select>
+       </div>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn" style="
+    
+          border: 1px solid #8e44ad;
+          color: #8e44ad;
+          border-radius: 17px;background-color:white" type="submit" >Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container my-3">
+   <marquee> <h3 style="font-size: xx-large;
+font-family: initial;">Breaking News<img src="new.gif"></h3></marquee>
+    <hr>
+    <div class="accordion" id="newsAccordion"></div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="new.js"></script>
+</body>
+
+</html>
